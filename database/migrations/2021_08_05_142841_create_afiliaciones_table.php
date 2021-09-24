@@ -27,6 +27,9 @@ class CreateAfiliacionesTable extends Migration
             $table->string('cargo');
             $table->integer('revista'); // 1:Titular -- 2:Interino -- 3:Suplente
             $table->date('fecha_ingreso_docencia')->nullable();
+            $table->date('fecha_aceptacion');
+            $table->date('fecha_baja');
+
 
             $table->timestamps();
         });

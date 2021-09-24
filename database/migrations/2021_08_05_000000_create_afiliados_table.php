@@ -16,7 +16,8 @@ class CreateAfiliadosTable extends Migration
         Schema::create('afiliados', function (Blueprint $table) {
             $table->id();
             $table->integer('nro_afiliado')->nullable();
-            $table->date('fecha');
+            $table->date('fecha_carga');
+            $table->date('fecha_form');
             $table->string('apellido');
             $table->string('nombre');
             $table->bigInteger('dni')->unique();
@@ -25,10 +26,10 @@ class CreateAfiliadosTable extends Migration
             $table->string('domicilio');
             $table->string('localidad');
             $table->unsignedBigInteger('departamento_id');
-            $table->integer('tel_fijo');
+            $table->integer('tel_fijo')->nullable();
             $table->integer('tel_cel');
             $table->integer('estado');    // 0:Inactivo ---- 1:Activo
-            $table->date('fecha_aceptacion');
+            $table->date('fecha_aceptacion')->nullable();
             $table->timestamps();
         });
     }
