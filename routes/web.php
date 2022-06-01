@@ -36,3 +36,5 @@ Route::resource('departamentos', 'App\Http\Controllers\DepartamentoController') 
 
 Route::resource('escuelas', 'App\Http\Controllers\EscuelaController') /* debo usar la ruta completa */
   ->middleware(['auth:sanctum', 'verified']);
+
+
